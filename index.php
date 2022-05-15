@@ -32,7 +32,74 @@
 
 <body id="top">
     <main>
-        <?php include('templates/navbar.php') ?>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-lg">
+            <div class="container">
+                <a class="navbar-brand mx-auto d-lg-none" href="index.html">
+                    Al Vesuvio
+                    <strong class="d-block">Pizzeria</strong>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#hero">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+
+
+
+                        <a class="navbar-brand d-none d-lg-block" href="index.html">
+                            Al Vesuvio
+                            <strong class="d-block">Pizzeria</strong>
+                        </a>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#menu">Menu</a>
+                        </li>
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+
+                        <div id="google_translate_element" class="mt-1"></div>
+                        <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({
+                                    pageLanguage: 'en',
+
+                                    autoDisplay: 'true',
+
+                                    includedLanguages: 'en,it,sq,,fr',
+                                }, 'google_translate_element');
+                            }
+                        </script>
+
+                        <script>
+                            function changeGoogleTranslate() {
+                                if ($(".goog-te-combo option:first-child").text() == "") {
+                                    $(".goog-te-combo").selectBox();
+                                } else {
+                                    setTimeout(changeGoogleTranslate, 50);
+                                }
+                            }
+                            changeGoogleTranslate();
+                        </script>
+
+                        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
         <section class="hero" id="hero">
             <div class="container">
                 <div class="row">
@@ -102,8 +169,30 @@
         <!-- Section → Gallery | End -->
         <!-- Icluded Menu -->
         <?php include('sections/section-menu.php') ?>
-        <!-- Icluded Footer -->
-        <?php include('templates/footer.php') ?>
+        <footer class="site-footer section-padding" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <h5 class="mb-lg-4 mb-3">Our pizzeria</h5>
+                        <p><a href="mailto:sellaj30@gmail.com" class="text-white">Email : sellaj30@gmail.com</a>
+                        <p>
+                        <p>Location : 123 Digital Art Street, San Diego, CA 92123</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <h5 class="mb-lg-4 mb-2">Socials</h5>
+                        <ul class="social-icon">
+                            <li><a href="https://www.facebook.com/pizzeriaalvesuvio2018" target="_blank" class="social-icon-link bi-facebook text-white"></a></li>
+                            <li><a href="https://www.instagram.com/pizzeria_al_vesuvio_olmi/" target="_blank" class="social-icon-link bi-instagram text-white"></a></li>
+                        </ul>
+                        <div>
+                            <p class="copyright-text">Copyright © Al Vesuvio 2022
+                                <br>
+                                Design: <a href="https://gjinienis.netlify.app/" target="_blank">Enis Gjini</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </footer>
     </main>
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
